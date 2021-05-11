@@ -1,0 +1,264 @@
+doctype html
+html(lang='en')
+ head
+  meta(charset="utf-8")
+  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  link(rel="stylesheet" href="../css/main.css")
+  link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous")
+  link(rel="stylesheet" href="../swiper/swiper-bundle.css" )
+  link(rel="stylesheet" href="../swiper/swiper-bundle.min.css")
+  
+  title Weather App
+body
+  header.header.header--bgColor
+    .container
+      .row.header__row1        
+        nav.navbar.navbar-expand-md 
+          .container-fluid 
+            a(class=" my-brand" href="#") FUN WEATHER 
+            button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+              span.navbar-toggler-icon 
+            #navbarNavDropdown.collapse.navbar-collapse
+              ul.navbar-nav
+                li.nav-item
+                  a(class="my-link active" aria-current="page" href="#") Home
+                li.nav-item 
+                  a(class="my-link" aria-current="page" href="#") Features
+                li.nav-item 
+                  a(class="my-link" aria-current="page" href="#") Reviwes 
+                li.nav-item.dropdown  
+                  a(class="my-link dropdown-toggle" id="navbarScrollingDropdown"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Download
+                  ul(class="dropdown-menu" aria-labelledby="navbarScrollingDropdown")
+                    li
+                      a.dropdown-item(href="#") Link1
+                    li
+                      a.dropdown-item(href="#") Link2
+                    li
+                      hr.drowdown-divider
+                    li
+                      a.dropdown-item(href="#") Link3 
+            span.header__links 
+              i(class="fab fa-facebook")
+            span.header__links 
+              i(class="fab fa-instagram")
+            span.header__links 
+              i(class="fab fa-twitter")
+      //-HEADER PART2
+      .row.header__row2.mt-5
+        .col-6.col-text
+          h2.header__heading Get the most fun
+            br 
+            |weather app 
+          p.header__text Simple, nice and user-friendly application of the 
+            br
+            |weather.Only useful information
+          button.header__btn1.header__btn1--bgColor.btn Download
+          button.header__btn2.header__btn2--bgColor.btn Features
+          
+        .col-6
+          .img-container 
+            img(src="../img/phone_cloudy_1.png", alt="phone", srcset="" class="img-fluid")
+      
+  //-SECTİON FEATURES
+  section.features
+    .container
+      .row
+        h2(style="color:#648cff;") PERFECT FEATURES
+        h6(style="color:#999999;") Only neccesory
+        .col-10.mx-auto.my-3 
+          .row 
+            .col-4
+              .card
+                .card-horizontal
+                  .img
+                    img(src="../img/icon_usability.png")
+                  .card-body
+                    h5(class="card-title" style="color:#353854")  Usability 
+                    p(class="card-text" style="color:#999") Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+            .col-4
+              .card
+                .card-horizontal
+                  .img
+                    img(src="../img/icon_usability.png")
+                  .card-body
+                    h5(class="card-title" style="color:#353854") Parallax Effect 
+                    p(class="card-text" style="color:#999") Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+            .col-4
+              .card
+                .card-horizontal
+                  .img
+                    img(src="../img/icon_usability.png")
+                  .card-body
+                    h5(class="card-title" style="color:#353854") Unlimites Colors 
+                    p(class="card-text" style="color:#999") Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
+  
+  //-SECTİON WİDGETS
+  section.widgets
+    .container
+      .row
+        h2(style="color:#648cff;") SIMPLE WIDGETS
+        h6(style="color:#999999;") Drap and Drop
+      .col-6.col-md-10.col-lg-6.mx-auto 
+        .swiper-container 
+          .swiper-wrapper
+            .swiper-slide
+              img(src="../img/widget_center.png", alt="", srcset="" )
+            .swiper-slide
+              img(src="../img/widget_right.png", alt="", srcset="")
+            .swiper-slide
+              img(src="../img/widget_left.png", alt="", srcset="")
+          .swiper-pagination 
+          .swiper-button-prev 
+          .swiper-button-next
+
+  //-SECTİON SCREENSHOTS
+  section.screenshots 
+    .container
+      .row.screenshots_row1
+        h2(style="color:#648cff;") SCREENSHOTS
+        h6(style="color:#999999;") The brightest images 
+      //-PHONE_CLOUDY
+      .row.screenshots__row2
+        .col-6
+          img(src="../img/phone_cloudy_2.png", alt="", srcset="")
+        .col-6
+          .card.border-0            
+            .card-body
+              .img-container.my-col 
+                img(src="../img/icon_cloud.png", alt="")
+              .img-container 
+                h5.card-title WHEN THE CLOUDS
+                p Variable information on the air humidity, the
+                  br
+                  |feeling of the weather, and the ability to share 
+                  br
+                  |this with your friends
+                img(src="../img/icon_percent.png", alt="", srcset="")
+      //-PHONE_SUNNY
+      .row.screenshots__row2
+        .col-6
+          .card.border-0            
+            .card-body(style="text-align:center;")
+              .img-container.my-col 
+                img(src="../img/circle.png", alt="")
+              .img-container 
+                h5.card-title WHEN THE SUN
+                p Sometimes the simplest things are the hardest
+                  br
+                  |to find. So we created a new line for everyday
+                  br
+                  |life. Sometimes the simplest things are the
+                img(src="../img/icon_percent.png", alt="", srcset="")
+        .col-6
+          img(src="../img/phone_sunny2.png", alt="", srcset="")
+
+      //-PHONE_RAİNY
+      .row.screenshots__row2
+        .col-6
+          img(src="../img/phone_rainy2.png", alt="", srcset="")
+        .col-6
+          .card.border-0            
+            .card-body
+              .img-container.my-col 
+                img(src="../img/icon_cloud2.png", alt="")
+              .img-container 
+                h5.card-title WHEN THE RAIN
+                p Sometimes the simplest things are the hardest
+                  br
+                  |to find. So we created a new line for everyday
+                  br
+                  |life. Sometimes the simplest 
+                img(src="../img/icon_percent.png", alt="", srcset="")
+      
+  //-REVIEWS
+  section.reviews
+    .container
+      .row.text-center
+        h2(style="color:#648cff;") WHAT PEOPLE ARE SAYING
+        h6(style="color:#999999;") Reviews  
+      .row.mt-5
+        .col-md-6.p-3
+          img(src="../img/icon_quote.png" class="img-fluid")
+          blockquote.blockquote
+            p(style="color:#b3b5bf;") What art offers is space - a certain breathing room for the spirit. 
+            h6(style="color:#b3b5bf;" class="text-left") John Updike
+          .img-parent(style="text-align:right;") 
+            img(src="../img/icon_quote2.png" class="img-fluid")
+
+        .col-md-6.p-3
+          img(src="../img/icon_quote.png" class="img-fluid")
+          blockquote.blockquote
+            p(style="color:#b3b5bf;") We do not see nature with our eyes, but with our understandings and our hearts. 
+            h6(style="color:#b3b5bf;" class="text-left") William Hazlit
+          .img-parent(style="text-align:right;") 
+            img(src="../img/icon_quote2.png" class="img-fluid")
+
+        .col-md-6.p-3
+          img(src="../img/icon_quote.png" class="img-fluid")
+          blockquote.blockquote
+            p(style="color:#b3b5bf;") The only courage that matters is the kind that gets you from one moment to the next. 
+            h6(style="color:#b3b5bf;" class="text-left") Mignon McLaughlin
+          .img-parent(style="text-align:right;") 
+            img(src="../img/icon_quote2.png" class="img-fluid")
+
+        .col-md-6.p-3
+          img(src="../img/icon_quote.png" class="img-fluid")
+          blockquote.blockquote
+            p(style="color:#b3b5bf;") No man has a good enough memory to be a successful liar. 
+            h6(style="color:#b3b5bf;" class="text-left") Abraham Lincol
+          .img-parent(style="text-align:right;") 
+            img(src="../img/icon_quote2.png" class="img-fluid")
+
+  //-DOWNLOAD
+  section.download
+    .container
+      .row 
+        .col-md-6.down
+          h2.down__heading HOW DOWNLOAD THE APP?
+          p.down__text Simple, nice and user-friendly application of the 
+          a(href="#" class="down__google")
+          a(href="#" class="down__app")
+        .col-md-6
+        
+  
+  footer.footer
+    .container-fluid
+      .row
+        nav.navbar.navbar-expand-md 
+          .container
+            a(class="brand" href="#") 
+              span(style="color:#fc6a42") FUN 
+              span(style="color:#648cff") WEATHER 
+            a(class="f-link active" aria-current="page" href="#") Home
+            a(class="f-link" aria-current="page" href="#") Features
+            a(class="f-link" aria-current="page" href="#") Reviwes 
+            a(class="f-link" aria-current="page" href="#") Downlod 
+            .social-links                
+              span
+                i(class="fab fa-facebook")
+              span
+                i(class="fab fa-instagram")
+              span
+                i(class="fab fa-twitter")
+      
+      hr.container-fluid.mt-5
+      .row
+        .col-10.pt-3.pb-3.very_bottom
+          span © 2021 All rights reserved. Weather App Theme by Gravpix
+          a(href="#")
+            i(class="fas fa-angle-up" style="color:white;")
+
+
+
+
+     
+        
+
+      
+   
+  script(src="../swiper/swiper-bundle.js")
+  script(src="../swiper/swiper-bundle.min.js")
+   
+  script(src="../js/popper.js") 
+  script(src="../js/bootstrap.js") 
+  script(src="../js/swiper.js") 
