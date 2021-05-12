@@ -1,17 +1,17 @@
 //Media Query Mixins
 @mixin mediaSmall {
-    @media screen and (max-width:576px) {
+    @media screen and (max-width:575.98px) {
         @content;
     }
 }
 
 @mixin mediaMedium {
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:767.98px) {
         @content;
     }
 }
 @mixin mediaLarge {
-    @media screen and (min-width:769px) and (max-width:1170px) {
+    @media screen and (max-width:991.98px) {
         @content;
     }
 }

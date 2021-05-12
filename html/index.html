@@ -5,46 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-    <link rel="stylesheet" href="../swiper/swiper-bundle.css">
     <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
     <title>Weather App</title>
   </head>
 </html>
 <body>
-  <header class="header header--bgColor">
-    <div class="container">
-      <div class="row header__row1">       
-        <nav class="navbar navbar-expand-md"> 
-          <div class="container-fluid"> <a class=" my-brand" href="#">FUN WEATHER </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="my-link active" aria-current="page" href="#">Home</a></li>
-                <li class="nav-item"> <a class="my-link" aria-current="page" href="#">Features</a></li>
-                <li class="nav-item"> <a class="my-link" aria-current="page" href="#">Reviwes </a></li>
-                <li class="nav-item dropdown"> <a class="my-link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Download</a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+  <header class="header header--bgColor"> 
+    <div class="container-fluid"> 
+      <div class="row header__row1">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid"><a class="header__row1__brand" href="#">FUN WEATHER </a>
+            <div class="d-flex flex-row order-lg-3">
+              <ul class="navbar-nav flex-row">               
+                <li class="nav-item"> <a class="nav-link text-white px-3" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="nav-item"><a class="nav-link text-white px-3" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="nav-item"> <a class="nav-link text-white px-3" href="#"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+            </div>
+            <button class="navbar-toggler header__row1__btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation"><span class="header__row1__btn__toggler-icon"> <i class="fas fa-bars"></i></span></button>
+            <div class="collapse navbar-collapse order-lg-2" id="myNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="header__row1__link active" aria-current="page" href="#">Home</a></li>
+                <li class="nav-item"> <a class="header__row1__link" aria-current="page" href="#">Features</a></li>
+                <li class="nav-item"> <a class="header__row1__link" aria-current="page" href="#">Reviwes </a></li>
+                <li class="nav-item dropdown"> <a class="header__row1__link dropdown-toggle" id="navbarScrollingDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Download</a>
+                  <ul class="header__row1__dropdown dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                     <li><a class="dropdown-item" href="#">Link1</a></li>
-                    <li><a class="dropdown-item" href="#">Link2</a></li>
-                    <li>
-                      <hr class="drowdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Link3 </a></li>
+                    <li><a class="dropdown-item" href="#">Link2  </a></li>
+                    <li><a class="dropdown-item" href="#">Link3            </a></li>
                   </ul>
                 </li>
               </ul>
-            </div><span class="header__links"> <i class="fab fa-facebook"></i></span><span class="header__links"> <i class="fab fa-instagram"></i></span><span class="header__links"> <i class="fab fa-twitter"></i></span>
+            </div>
           </div>
         </nav>
       </div>
-      <div class="row header__row2 mt-5">
-        <div class="col-6 col-text">
-          <h2 class="header__heading">Get the most fun<br>weather app </h2>
-          <p class="header__text">Simple, nice and user-friendly application of the <br>weather.Only useful information</p>
-          <button class="header__btn1 header__btn1--bgColor btn">Download</button>
-          <button class="header__btn2 header__btn2--bgColor btn">Features</button>
+    </div>
+    <div class="container">
+      <div class="row header__row2">
+        <div class="col-md-6 header__row2__col">
+          <div class="div">
+            <h2>Get the most fun <br>weather app </h2>
+            <p>Simple, nice and user-friendly application of the <br>weather.Only useful information</p>
+            <button class="header__row2__col__btn1 header__row2__col__btn1--bgColor btn">Download</button>
+            <button class="header__row2__col__btn2 header__row2__col__btn2--bgColor btn">Features</button>
+          </div>
         </div>
-        <div class="col-6">
+        <div class="col-md-6">
           <div class="img-container"> <img class="img-fluid" src="../img/phone_cloudy_1.png" alt="phone" srcset=""></div>
         </div>
       </div>
@@ -57,10 +64,10 @@
         <h6 style="color:#999999;">Only neccesory</h6>
         <div class="col-10 mx-auto my-3"> 
           <div class="row"> 
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="card">
                 <div class="card-horizontal">
-                  <div class="img"><img src="../img/icon_usability.png" class="img-fluid"></div>
+                  <div class="img"><img src="../img/icon_usability.png"></div>
                   <div class="card-body">
                     <h5 class="card-title" style="color:#353854"> Usability </h5>
                     <p class="card-text" style="color:#999">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life</p>
@@ -68,10 +75,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="card">
                 <div class="card-horizontal">
-                  <div class="img"><img src="../img/icon_usability.png" class="img-fluid"></div>
+                  <div class="img"><img src="../img/icon_usability.png"></div>
                   <div class="card-body">
                     <h5 class="card-title" style="color:#353854">Parallax Effect </h5>
                     <p class="card-text" style="color:#999">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life</p>
@@ -79,10 +86,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-4">
+            <div class="col-lg-4">
               <div class="card">
                 <div class="card-horizontal">
-                  <div class="img"><img src="../img/icon_usability.png" class="img-fluid"></div>
+                  <div class="img"><img src="../img/icon_usability.png"></div>
                   <div class="card-body">
                     <h5 class="card-title" style="color:#353854">Unlimites Colors </h5>
                     <p class="card-text" style="color:#999">Sometimes the simplest things are the hardest to find. So we created a new line for everyday life</p>
@@ -101,16 +108,18 @@
         <h2 style="color:#648cff;">SIMPLE WIDGETS</h2>
         <h6 style="color:#999999;">Drap and Drop</h6>
       </div>
-      <div class="col-6 col-md-10 col-lg-6 mx-auto"> 
-        <div class="swiper-container"> 
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="../img/widget_center.png" alt="" class="img-fluid"></div>
-            <div class="swiper-slide"><img src="../img/widget_right.png" alt="" class="img-fluid"></div>
-            <div class="swiper-slide"><img src="../img/widget_left.png" alt="" class="img-fluid"></div>
+      <div class="row widgets__row2">
+        <div class="col-10 mx-auto">      
+          <div class="swiper-container mySwiper"> 
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img class="img-fluid" src="../img/widget_center.png" alt=""></div>
+              <div class="swiper-slide"><img class="img-fluid" src="../img/widget_left.png" alt=""></div>
+              <div class="swiper-slide"><img class="img-fluid" src="../img/widget_right.png" alt=""></div>
+            </div>
+            <div class="swiper-pagination"> </div>
+            <div class="swiper-button-prev"> </div>
+            <div class="swiper-button-next"></div>
           </div>
-          <div class="swiper-pagination"> </div>
-          <div class="swiper-button-prev"> </div>
-          <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
@@ -122,12 +131,12 @@
         <h6 style="color:#999999;">The brightest images </h6>
       </div>
       <div class="row screenshots__row2">
-        <div class="col-6"><img src="../img/phone_cloudy_2.png" alt="" class="img-fluid"></div>
-        <div class="col-6">
+        <div class="col-lg-6 screenshots__row2__col1"><img class="screenshots__row2__img" src="../img/phone_cloudy_2.png" alt=""></div>
+        <div class="col-lg-6 screenshots__row2__col2">
           <div class="card border-0">           
             <div class="card-body">
-              <div class="img-container my-col"> <img src="../img/icon_cloud.png" class="img-fluid" alt=""></div>
-              <div class="img-container"> 
+              <div class="img-container my-col"> <img src="../img/icon_cloud.png" alt=""></div>
+              <div class="img-container">
                 <h5 class="card-title">WHEN THE CLOUDS</h5>
                 <p>Variable information on the air humidity, the<br>feeling of the weather, and the ability to share <br>this with your friends</p><img src="../img/icon_percent.png" alt="" srcset="">
               </div>
@@ -135,11 +144,11 @@
           </div>
         </div>
       </div>
-      <div class="row screenshots__row2">
-        <div class="col-6">
+      <div class="row screenshots__row3">
+        <div class="col-lg-6">
           <div class="card border-0">           
             <div class="card-body" style="text-align:center;">
-              <div class="img-container my-col"> <img src="../img/circle.png" alt="" class="img-fluid"></div>
+              <div class="img-container my-col"> <img src="../img/circle.png" alt=""></div>
               <div class="img-container"> 
                 <h5 class="card-title">WHEN THE SUN</h5>
                 <p>Sometimes the simplest things are the hardest<br>to find. So we created a new line for everyday<br>life. Sometimes the simplest things are the</p><img src="../img/icon_percent.png" alt="" srcset="">
@@ -147,14 +156,14 @@
             </div>
           </div>
         </div>
-        <div class="col-6"><img src="../img/phone_sunny2.png" alt="" class="img-fluid"></div>
+        <div class="col-lg-6"><img class="screenshots__row3__img" src="../img/phone_sunny2.png" alt=""></div>
       </div>
-      <div class="row screenshots__row2">
-        <div class="col-6"><img src="../img/phone_rainy2.png" alt="" class="img-fluid"></div>
-        <div class="col-6">
+      <div class="row screenshots__row4">
+        <div class="col-lg-6 screenshots__row4__col1"><img class="screenshots__row4__img" src="../img/phone_rainy2.png" alt=""></div>
+        <div class="col-lg-6 screenshots__row4__col2">
           <div class="card border-0">           
             <div class="card-body">
-              <div class="img-container my-col"> <img src="../img/icon_cloud2.png" alt="" class="img-fluid"></div>
+              <div class="img-container my-col"> <img src="../img/icon_cloud2.png" alt=""></div>
               <div class="img-container"> 
                 <h5 class="card-title">WHEN THE RAIN</h5>
                 <p>Sometimes the simplest things are the hardest<br>to find. So we created a new line for everyday<br>life. Sometimes the simplest </p><img src="../img/icon_percent.png" alt="" srcset="">
@@ -167,71 +176,66 @@
   </section>
   <section class="reviews">
     <div class="container">
-      <div class="row text-center">
+      <div class="row text-center"> 
         <h2 style="color:#648cff;">WHAT PEOPLE ARE SAYING</h2>
         <h6 style="color:#999999;">Reviews  </h6>
       </div>
       <div class="row mt-5">
-        <div class="col-md-6 p-3"><img class="img-fluid" src="../img/icon_quote.png">
-          <blockquote class="blockquote">
-            <p style="color:#b3b5bf;">What art offers is space - a certain breathing room for the spirit. </p>
-            <h6 class="text-left" style="color:#b3b5bf;">John Updike</h6>
+        <div class="col-md-6 p-3 reviews__col"><img class="img-fluid reviews__col__imgl" src="../img/icon_quote.png">
+          <blockquote class="blockquote d-flex flex-column">
+            <p style="color:#b3b5bf;">What art offers is space - a certain breathing room for the spirit. </p><small style="color:#b3b5bf;">John Updike          </small><img class="img-fluid align-self-end reviews__col__imgr" src="../img/icon_quote2.png">
           </blockquote>
-          <div class="img-parent" style="text-align:right;"> <img class="img-fluid" src="../img/icon_quote2.png"></div>
         </div>
-        <div class="col-md-6 p-3"><img class="img-fluid" src="../img/icon_quote.png">
-          <blockquote class="blockquote">
-            <p style="color:#b3b5bf;">We do not see nature with our eyes, but with our understandings and our hearts. </p>
-            <h6 class="text-left" style="color:#b3b5bf;">William Hazlit</h6>
+        <div class="col-md-6 p-3 reviews__col"><img class="img-fluid reviews__col__imgl" src="../img/icon_quote.png">
+          <blockquote class="blockquote d-flex flex-column">
+            <p style="color:#b3b5bf;">We do not see nature with our eyes, but with our understandings and our hearts. </p><small style="color:#b3b5bf;">William Hazlit</small><img class="img-fluid align-self-end reviews__col__imgr" src="../img/icon_quote2.png">
           </blockquote>
-          <div class="img-parent" style="text-align:right;"> <img class="img-fluid" src="../img/icon_quote2.png"></div>
         </div>
-        <div class="col-md-6 p-3"><img class="img-fluid" src="../img/icon_quote.png">
-          <blockquote class="blockquote">
-            <p style="color:#b3b5bf;">The only courage that matters is the kind that gets you from one moment to the next. </p>
-            <h6 class="text-left" style="color:#b3b5bf;">Mignon McLaughlin</h6>
+        <div class="col-md-6 p-3 reviews__col"><img class="img-fluid reviews__col__imgl" src="../img/icon_quote.png">
+          <blockquote class="blockquote d-flex flex-column">
+            <p style="color:#b3b5bf;">The only courage that matters is the kind that gets you from one moment to the next. </p><small style="color:#b3b5bf;">Mignon McLaughlin</small><img class="img-fluid align-self-end reviews__col__imgr" src="../img/icon_quote2.png">
           </blockquote>
-          <div class="img-parent" style="text-align:right;"> <img class="img-fluid" src="../img/icon_quote2.png"></div>
         </div>
-        <div class="col-md-6 p-3"><img class="img-fluid" src="../img/icon_quote.png">
-          <blockquote class="blockquote">
-            <p style="color:#b3b5bf;">No man has a good enough memory to be a successful liar. </p>
-            <h6 class="text-left" style="color:#b3b5bf;">Abraham Lincol</h6>
+        <div class="col-md-6 p-3 reviews__col"><img class="img-fluid reviews__col__imgl" src="../img/icon_quote.png">
+          <blockquote class="blockquote d-flex flex-column">
+            <p style="color:#b3b5bf;">No man has a good enough memory to be a successful liar. </p><small style="color:#b3b5bf;">Abraham Lincoln </small><img class="img-fluid align-self-end reviews__col__imgr" src="../img/icon_quote2.png">
           </blockquote>
-          <div class="img-parent" style="text-align:right;"> <img class="img-fluid" src="../img/icon_quote2.png"></div>
         </div>
       </div>
     </div>
   </section>
   <section class="download">
-    <div class="container">
+    <div class="container-md">
       <div class="row"> 
-        <div class="col-md-6 down">
-          <h2 class="down__heading">HOW DOWNLOAD THE APP?</h2>
-          <p class="down__text">Simple, nice and user-friendly application of the </p><a class="down__google" href="#"></a><a class="down__app" href="#"></a>
+        <div class="col-10 download__col">
+          <h2 class="download__col__heading">HOW DOWNLOAD THE APP?</h2>
+          <p class="download__col__text">Simple, nice and user-friendly application of the </p><a class="download__col__google" href="#"></a><a class="download__col__app" href="#"></a>
         </div>
-        <div class="col-md-6"></div>
       </div>
     </div>
   </section>
   <footer class="footer">
     <div class="container-fluid">
-      <div class="row">
-        <nav class="navbar navbar-expand-md"> 
-          <div class="container"><a class="brand" href="#"> <span style="color:#fc6a42">FUN </span><span style="color:#648cff">WEATHER </span></a><a class="f-link active" aria-current="page" href="#">Home</a><a class="f-link" aria-current="page" href="#">Features</a><a class="f-link" aria-current="page" href="#">Reviwes </a><a class="f-link" aria-current="page" href="#">Downlod </a>
-            <div class="social-links">               <span><i class="fab fa-facebook"></i></span><span><i class="fab fa-instagram"></i></span><span><i class="fab fa-twitter"></i></span></div>
+      <div class="row footer__row1">
+        <nav>
+          <div class="container-fluid">       
+            <div class="row">
+              <div class="footer__row1__col-brand col-lg-4"><a href="#"><span style="color:#fc6a42">FUN </span><span style="color:#648cff">WEATHER </span></a></div>
+              <div class="footer__row1__col-menu col-lg-8"><a class="active" aria-current="page" href="#">Home</a><a aria-current="page" href="#">Features</a><a aria-current="page" href="#">Reviwes </a><a aria-current="page" href="#">Downlod </a>
+                <div class="footer__row1__social-links">               <span><i class="fab fa-facebook"></i></span><span><i class="fab fa-instagram"></i></span><span><i class="fab fa-twitter"></i></span></div>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
       <hr class="container-fluid mt-5">
-      <div class="row">
-        <div class="col-10 pt-3 pb-3 very_bottom"><span>© 2021 All rights reserved. Weather App Theme by Gravpix</span><a href="#"><i class="fas fa-angle-up" style="color:white;"></i></a></div>
+      <div class="row footer__row2">
+        <div class="col-10 pt-3 pb-3 footer__row2__very-bottom"><span>© 2021 All rights reserved. Weather App Theme by Gravpix</span><a href="index.pug"><i class="fas fa-angle-up" style="color:white;"></i></a></div>
       </div>
     </div>
   </footer>
-  <script src="../swiper/swiper-bundle.js"></script>
-  <script src="../swiper/swiper-bundle.min.js"></script>
   <script src="../js/popper.js"> </script>
+  <script src="../swiper/swiper-bundle.min.js"></script>
   <script src="../js/bootstrap.js"> </script>
   <script src="../js/swiper.js"> </script>
 </body>

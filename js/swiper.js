@@ -1,19 +1,13 @@
-var swiper = new Swiper('.swiper-container', {
-  effect: 'coverflow',
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 2,
-  spaceBteween:10,
+var swiper = new Swiper('.mySwiper', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  centeredSlides:true,
+  slidesPerGroup:1,
   loop:true,
-  coverflowEffect: {
-    
-    stretch: 0,
-    depth: 100,
-    modifier: -1,
-    
-  },
+ 
   pagination: {
     el: '.swiper-pagination',
+    clickable:true,
   },
   navigation: {
     nextEl: '.swiper-button-next',

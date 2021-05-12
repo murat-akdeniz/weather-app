@@ -5,57 +5,77 @@ html(lang='en')
   meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
   link(rel="stylesheet" href="../css/main.css")
   link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous")
-  link(rel="stylesheet" href="../swiper/swiper-bundle.css" )
+  //-link(rel="stylesheet" href="../swiper/swiper-bundle.css" )
   link(rel="stylesheet" href="../swiper/swiper-bundle.min.css")
   
   title Weather App
 body
-  header.header.header--bgColor
-    .container
-      .row.header__row1        
-        nav.navbar.navbar-expand-md 
-          .container-fluid 
-            a(class=" my-brand" href="#") FUN WEATHER 
-            button(class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
-              span.navbar-toggler-icon 
-            #navbarNavDropdown.collapse.navbar-collapse
-              ul.navbar-nav
+  //-HEADER
+  header.header.header--bgColor 
+    .container-fluid 
+      //- HEADER PART 1
+      .row.header__row1
+        nav.navbar.navbar-expand-lg
+          .container-fluid
+            //- BRAND            
+            a(class="header__row1__brand" href="#") FUN WEATHER 
+
+            //- SOCIAL LİNKS 
+            //- 992 >= üstünde iconlar ensağda olsun -- 992 den küçük olunca kendi sırasında menu elemanlarından önce gelir
+            .d-flex.flex-row.order-lg-3
+              ul.navbar-nav.flex-row                
+                li.nav-item 
+                  a(href="#" class="nav-link text-white px-3")
+                    i(class="fab fa-facebook")
                 li.nav-item
-                  a(class="my-link active" aria-current="page" href="#") Home
+                  a(href="#" class="nav-link text-white px-3")
+                    i(class="fab fa-instagram")
                 li.nav-item 
-                  a(class="my-link" aria-current="page" href="#") Features
+                  a(href="#" class="nav-link text-white px-3")
+                    i(class="fab fa-twitter")
+
+            
+            //-HAMBURGER TOGGLE BUTTON
+            button(class="navbar-toggler header__row1__btn btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#myNav" aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation")
+              span.header__row1__btn__toggler-icon 
+                i(class="fas fa-bars")
+
+            //- 768>= üstünde menü elemanları iconlardan önce gelsin
+            #myNav.collapse.navbar-collapse.order-lg-2
+              ul.navbar-nav.ml-auto
+                li.nav-item
+                  a(class="header__row1__link active" aria-current="page" href="#") Home
                 li.nav-item 
-                  a(class="my-link" aria-current="page" href="#") Reviwes 
+                  a(class="header__row1__link" aria-current="page" href="#") Features
+                li.nav-item 
+                  a(class="header__row1__link" aria-current="page" href="#") Reviwes 
                 li.nav-item.dropdown  
-                  a(class="my-link dropdown-toggle" id="navbarScrollingDropdown"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Download
-                  ul(class="dropdown-menu" aria-labelledby="navbarScrollingDropdown")
+                  a(class="header__row1__link dropdown-toggle" id="navbarScrollingDropdown"  href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Download
+                  ul(class="header__row1__dropdown dropdown-menu" aria-labelledby="navbarScrollingDropdown")
                     li
                       a.dropdown-item(href="#") Link1
                     li
-                      a.dropdown-item(href="#") Link2
+                      a.dropdown-item(href="#") Link2  
                     li
-                      hr.drowdown-divider
-                    li
-                      a.dropdown-item(href="#") Link3 
-            span.header__links 
-              i(class="fab fa-facebook")
-            span.header__links 
-              i(class="fab fa-instagram")
-            span.header__links 
-              i(class="fab fa-twitter")
-      //-HEADER PART2
-      .row.header__row2.mt-5
-        .col-6.col-text
-          h2.header__heading Get the most fun
-            br 
-            |weather app 
-          p.header__text Simple, nice and user-friendly application of the 
-            br
-            |weather.Only useful information
-          button.header__btn1.header__btn1--bgColor.btn Download
-          button.header__btn2.header__btn2--bgColor.btn Features
-          
-        .col-6
+                      a.dropdown-item(href="#") Link3            
+
+
+    //- HEADER PART 2
+    .container
+      .row.header__row2
+        .col-md-6.header__row2__col
+          .div
+            h2 Get the most fun 
+              br 
+              |weather app 
+            p Simple, nice and user-friendly application of the 
+              br
+              |weather.Only useful information
+            
+            button.header__row2__col__btn1.header__row2__col__btn1--bgColor.btn Download
+            button.header__row2__col__btn2.header__row2__col__btn2--bgColor.btn Features
+            
+        .col-md-6
           .img-container 
             img(src="../img/phone_cloudy_1.png", alt="phone", srcset="" class="img-fluid")
       
@@ -67,7 +87,7 @@ body
         h6(style="color:#999999;") Only neccesory
         .col-10.mx-auto.my-3 
           .row 
-            .col-4
+            .col-lg-4
               .card
                 .card-horizontal
                   .img
@@ -75,7 +95,7 @@ body
                   .card-body
                     h5(class="card-title" style="color:#353854")  Usability 
                     p(class="card-text" style="color:#999") Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
-            .col-4
+            .col-lg-4
               .card
                 .card-horizontal
                   .img
@@ -83,7 +103,7 @@ body
                   .card-body
                     h5(class="card-title" style="color:#353854") Parallax Effect 
                     p(class="card-text" style="color:#999") Sometimes the simplest things are the hardest to find. So we created a new line for everyday life
-            .col-4
+            .col-lg-4
               .card
                 .card-horizontal
                   .img
@@ -98,18 +118,19 @@ body
       .row
         h2(style="color:#648cff;") SIMPLE WIDGETS
         h6(style="color:#999999;") Drap and Drop
-      .col-6.col-md-10.col-lg-6.mx-auto 
-        .swiper-container 
-          .swiper-wrapper
-            .swiper-slide
-              img(src="../img/widget_center.png", alt="", srcset="" )
-            .swiper-slide
-              img(src="../img/widget_right.png", alt="", srcset="")
-            .swiper-slide
-              img(src="../img/widget_left.png", alt="", srcset="")
-          .swiper-pagination 
-          .swiper-button-prev 
-          .swiper-button-next
+      .row.widgets__row2
+        .col-10.mx-auto       
+          .swiper-container.mySwiper 
+            .swiper-wrapper
+              .swiper-slide
+                img(src="../img/widget_center.png", alt="" class="img-fluid" )
+              .swiper-slide
+                img(src="../img/widget_left.png", alt="", class="img-fluid")
+              .swiper-slide
+                img(src="../img/widget_right.png", alt="",class="img-fluid")
+            .swiper-pagination 
+            .swiper-button-prev 
+            .swiper-button-next
 
   //-SECTİON SCREENSHOTS
   section.screenshots 
@@ -119,14 +140,14 @@ body
         h6(style="color:#999999;") The brightest images 
       //-PHONE_CLOUDY
       .row.screenshots__row2
-        .col-6
-          img(src="../img/phone_cloudy_2.png", alt="", srcset="")
-        .col-6
+        .col-lg-6.screenshots__row2__col1
+          img(src="../img/phone_cloudy_2.png", alt="", class="screenshots__row2__img")
+        .col-lg-6.screenshots__row2__col2
           .card.border-0            
             .card-body
               .img-container.my-col 
                 img(src="../img/icon_cloud.png", alt="")
-              .img-container 
+              .img-container
                 h5.card-title WHEN THE CLOUDS
                 p Variable information on the air humidity, the
                   br
@@ -135,8 +156,8 @@ body
                   |this with your friends
                 img(src="../img/icon_percent.png", alt="", srcset="")
       //-PHONE_SUNNY
-      .row.screenshots__row2
-        .col-6
+      .row.screenshots__row3
+        .col-lg-6
           .card.border-0            
             .card-body(style="text-align:center;")
               .img-container.my-col 
@@ -149,14 +170,14 @@ body
                   br
                   |life. Sometimes the simplest things are the
                 img(src="../img/icon_percent.png", alt="", srcset="")
-        .col-6
-          img(src="../img/phone_sunny2.png", alt="", srcset="")
+        .col-lg-6
+          img(src="../img/phone_sunny2.png", alt="",class="screenshots__row3__img")
 
       //-PHONE_RAİNY
-      .row.screenshots__row2
-        .col-6
-          img(src="../img/phone_rainy2.png", alt="", srcset="")
-        .col-6
+      .row.screenshots__row4
+        .col-lg-6.screenshots__row4__col1
+          img(src="../img/phone_rainy2.png", alt="",class="screenshots__row4__img")
+        .col-lg-6.screenshots__row4__col2
           .card.border-0            
             .card-body
               .img-container.my-col 
@@ -173,92 +194,88 @@ body
   //-REVIEWS
   section.reviews
     .container
-      .row.text-center
+      .row.text-center 
         h2(style="color:#648cff;") WHAT PEOPLE ARE SAYING
         h6(style="color:#999999;") Reviews  
       .row.mt-5
-        .col-md-6.p-3
-          img(src="../img/icon_quote.png" class="img-fluid")
-          blockquote.blockquote
+        .col-md-6.p-3.reviews__col
+          img(src="../img/icon_quote.png" class="img-fluid reviews__col__imgl")
+          blockquote.blockquote.d-flex.flex-column
             p(style="color:#b3b5bf;") What art offers is space - a certain breathing room for the spirit. 
-            h6(style="color:#b3b5bf;" class="text-left") John Updike
-          .img-parent(style="text-align:right;") 
-            img(src="../img/icon_quote2.png" class="img-fluid")
+            small(style="color:#b3b5bf;") John Updike          
+            img(src="../img/icon_quote2.png" class="img-fluid align-self-end reviews__col__imgr")
 
-        .col-md-6.p-3
-          img(src="../img/icon_quote.png" class="img-fluid")
-          blockquote.blockquote
+        .col-md-6.p-3.reviews__col
+          img(src="../img/icon_quote.png" class="img-fluid reviews__col__imgl")
+          blockquote.blockquote.d-flex.flex-column
             p(style="color:#b3b5bf;") We do not see nature with our eyes, but with our understandings and our hearts. 
-            h6(style="color:#b3b5bf;" class="text-left") William Hazlit
-          .img-parent(style="text-align:right;") 
-            img(src="../img/icon_quote2.png" class="img-fluid")
+            small(style="color:#b3b5bf;") William Hazlit
+            img(src="../img/icon_quote2.png" class="img-fluid align-self-end reviews__col__imgr")
 
-        .col-md-6.p-3
-          img(src="../img/icon_quote.png" class="img-fluid")
-          blockquote.blockquote
+        .col-md-6.p-3.reviews__col
+          img(src="../img/icon_quote.png" class="img-fluid reviews__col__imgl")
+          blockquote.blockquote.d-flex.flex-column
             p(style="color:#b3b5bf;") The only courage that matters is the kind that gets you from one moment to the next. 
-            h6(style="color:#b3b5bf;" class="text-left") Mignon McLaughlin
-          .img-parent(style="text-align:right;") 
-            img(src="../img/icon_quote2.png" class="img-fluid")
+            small(style="color:#b3b5bf;") Mignon McLaughlin
+            img(src="../img/icon_quote2.png" class="img-fluid align-self-end reviews__col__imgr")
 
-        .col-md-6.p-3
-          img(src="../img/icon_quote.png" class="img-fluid")
-          blockquote.blockquote
+        .col-md-6.p-3.reviews__col
+          img(src="../img/icon_quote.png" class="img-fluid reviews__col__imgl")
+          blockquote.blockquote.d-flex.flex-column
             p(style="color:#b3b5bf;") No man has a good enough memory to be a successful liar. 
-            h6(style="color:#b3b5bf;" class="text-left") Abraham Lincol
-          .img-parent(style="text-align:right;") 
-            img(src="../img/icon_quote2.png" class="img-fluid")
+            small(style="color:#b3b5bf;") Abraham Lincoln 
+            img(src="../img/icon_quote2.png" class="img-fluid align-self-end reviews__col__imgr")
+
+ 
 
   //-DOWNLOAD
   section.download
-    .container
+    .container-md
       .row 
-        .col-md-6.down
-          h2.down__heading HOW DOWNLOAD THE APP?
-          p.down__text Simple, nice and user-friendly application of the 
-          a(href="#" class="down__google")
-          a(href="#" class="down__app")
-        .col-md-6
+        .col-10.download__col
+          h2.download__col__heading HOW DOWNLOAD THE APP?
+          p.download__col__text Simple, nice and user-friendly application of the 
+          a(href="#" class="download__col__google")
+          a(href="#" class="download__col__app")
+        
         
   
   footer.footer
     .container-fluid
-      .row
-        nav.navbar.navbar-expand-md 
-          .container
-            a(class="brand" href="#") 
-              span(style="color:#fc6a42") FUN 
-              span(style="color:#648cff") WEATHER 
-            a(class="f-link active" aria-current="page" href="#") Home
-            a(class="f-link" aria-current="page" href="#") Features
-            a(class="f-link" aria-current="page" href="#") Reviwes 
-            a(class="f-link" aria-current="page" href="#") Downlod 
-            .social-links                
-              span
-                i(class="fab fa-facebook")
-              span
-                i(class="fab fa-instagram")
-              span
-                i(class="fab fa-twitter")
+      .row.footer__row1
+        nav
+          .container-fluid        
+            .row
+              .footer__row1__col-brand.col-lg-4
+                a(href="#")
+                  span(style="color:#fc6a42") FUN 
+                  span(style="color:#648cff") WEATHER 
+              .footer__row1__col-menu.col-lg-8
+                a(class="active" aria-current="page" href="#") Home
+                a( aria-current="page" href="#") Features
+                a(aria-current="page" href="#") Reviwes 
+                a( aria-current="page" href="#") Downlod 
+                .footer__row1__social-links                
+                  span
+                    i(class="fab fa-facebook")
+                  span
+                    i(class="fab fa-instagram")
+                  span
+                    i(class="fab fa-twitter")
       
       hr.container-fluid.mt-5
-      .row
-        .col-10.pt-3.pb-3.very_bottom
+      .row.footer__row2
+        .col-10.pt-3.pb-3.footer__row2__very-bottom
           span © 2021 All rights reserved. Weather App Theme by Gravpix
-          a(href="#")
+          a(href="index.pug")
             i(class="fas fa-angle-up" style="color:white;")
 
 
-
-
-     
-        
-
-      
-   
-  script(src="../swiper/swiper-bundle.js")
+  
+  script(src="../js/popper.js") 
+  //-script(src="../swiper/swiper-bundle.js")
   script(src="../swiper/swiper-bundle.min.js")
    
-  script(src="../js/popper.js") 
+  
   script(src="../js/bootstrap.js") 
   script(src="../js/swiper.js") 

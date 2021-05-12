@@ -1,14 +1,157 @@
 //MEDIA XLARGE
 @include mediaXLarge{
-
-}
-//MEDIA LARGE
-@include mediaLarge{
     
+}
+//MEDIA LARGE 992 nin altına düşünce uygula
+@include mediaLarge{
+
+    //HEADER
+    .header{
+       
+    }
+
+    //WİDGETS
+    .widgets{
+        &__row2{
+            margin-top: 8vh;
+        }
+    }
+    //SCREENSHOTS
+    .screenshots{
+        text-align: center;
+        padding-top: 5vh;
+        padding-bottom: 8vh; 
+    
+        //cardı telefonun ortasına hizalıyor
+        .my-col{
+            margin-top: 15vh;
+        }
+        .img-container{
+            text-align: center;
+            margin-bottom: 2rem;
+            p{                
+                font-size: 1.2rem;
+                margin-bottom: 2rem;    
+            }
+            h5{                
+                font-size: 1.3rem;
+            }
+        }
+        &__row2{
+            &__img{
+                content: url('../img/responsive/phone_cloudy_mini.png');                
+            }
+            &__col1{
+                order: 2;
+            }
+            &__col2{
+                order:1;
+            }
+        }
+        &__row3{
+            &__img{
+                content: url('../img/responsive/phone_sunny_mini.png');
+            }
+        }
+        &__row4{
+            &__img{
+                content: url('../img/responsive/phone_rainy_mini.png');
+            }
+            &__col1{
+                order: 2;
+            }
+            &__col2{
+                order:1;
+            }
+        }
+        //screenshots içindeki herbir kolonun margin top ayarı
+        &__row2,&__row3,&__row4{
+            margin-top: 10vh;
+        }
+        //ikonların üstündeki boşluğu ayarlama
+        .my-col{
+            margin-top: 2vh;
+        }
+    }
+    //REVIEWS
+    .reviews{
+        &__col{
+            &__imgl{
+                content: url('../img/responsive/quote_left_mini.png');
+            }
+            &__imgr{
+                content: url('../img/responsive/quote_right_mini.png');
+            }
+        }
+    }
+
+    //DOWNLOAD
+    .download{
+        padding-left:.5rem;
+        &__col{
+            &__heading{
+                font-size: 1.5rem;
+            }
+            &__google{
+                //background:url('../img/responsive/logo_google_mini.png');
+            }
+        }
+    }
+    //FOOTER
+    .footer{
+        &__row1{
+            &__brand{
+                margin-left: 0;
+            }
+            &__section{
+               margin-right: 1rem;               
+            }
+        }
+    }
+     
 }
 //MEDIA MEDIUM
 @include mediaMedium{
-    
+    //header 
+    .header{
+        &__row2{
+            margin-top: 3rem;          
+            text-align: center;            
+            &__col{
+                margin-top: 1vh;
+                margin-bottom: 5vh;
+                h2{
+                    margin-bottom: 1rem;
+                }
+                h2 br{
+                    display: none;
+                }
+                
+            }             
+        }
+        
+        .img-container{
+            //text-align: center;
+            img{
+                content: url("../img/responsive/phone_header_mini.png");
+            }
+        }        
+    }   
+    //FOOTER
+    .footer{
+        
+        &__row1{           
+            &__section1{    
+                a{
+                    margin-left: 0;
+                }
+            }
+
+            &__section2{                
+               margin: 0;                           
+            }
+        }
+    } 
 }
 //MEDIA SMALL
 @include mediaSmall{

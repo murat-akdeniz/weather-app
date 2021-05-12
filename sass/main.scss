@@ -5,85 +5,94 @@ html{
 }
 
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;   
     display: flex;
     flex-direction: column;
     min-height: 100%;
     margin: 0 auto;
     line-height: 1.5;
-    
+    color: white;
     
 }
+
 
 //first screen
 
 .header{
-    height: 85vh;
+    width: 100%;
     background-image: url('../img/wave_bg.jpg');
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: left bottom;
+    background-position: right bottom;
     background-size: contain;
+    padding:2rem 0;
 
     &--bgColor{
         background-color: #648cff;
-    }
-    /* max-width: 100%;
-    background-image: url('../img/firstscreen_bg.jpg');
-    background-repeat: no-repeat;
-    background-attachment: scroll;    
-    background-size: contain;
- */
-    &__links{
-        margin-right: 10px;
-        color: white;
-    }
-    &__btn1{
-        color:white;
-        &--bgColor{
-            background: #fc6a42;
+    } 
+
+    //ROW 1
+    &__row1{
+       
+        &__brand{
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin: 0 10vw;
+                        
+        }
+        &__btn{
+            &__toggler-icon{
+                color: #fff;
+            }
+        }
+        &__link{
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            margin-right: 30px;
+            padding: 0 20px;
+            text-align: center;
+            font-weight: 400;
+            &:hover{
+                color: #444;
+            }
+            
+        }
+        &__dropdown{
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+            margin-left: 3rem;
+            width: 5rem;
         }
     }
-    &__btn2{
-        color: white;
-        &--bgColor{
-            background:#4466c9 ;
-        }
-    }
-   &__row2{
-      text-align: left;
-      margin-left: 1rem;
-      .col-text{
-          margin-top: 6vh;
-      }
-     
-   }
-   &__row3{
-       background: url('../img/wave_bg.png');
-   }
-
+    //ROW 2
+    &__row2{
+        margin-top: 5rem;     
+        &__col{   
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;      
+            &__btn1{
+                color:white;
+                
+                &--bgColor{
+                    background: #fc6a42;
+                }
+            }
+            &__btn2{
+                color: white;
+                
+                &--bgColor{
+                    background:#4466c9 ;
+                }
+            } 
+        }     
+    }      
 }
 
-
-.my-link{
-    color: white;
-    font-size: 1rem;
-    text-decoration: none;
-    margin-right: 30px;
-    padding: 0 20px;
-    text-align: center;
-    font-weight: 400;
-}
-.my-brand{
-    color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
-    margin-right: 2rem;
-    text-align: center;
-    
-}
-//end of first screen
 
 //featuers
 .features{
@@ -105,31 +114,35 @@ body{
 .widgets{
     text-align: center;
     padding: 10vh 0;
-
-    .col-10{
-        margin-top: 5vh;
+    
+    .swiper-container{
+        width: 100%;
+        height: 100%;
     }
+    .swiper-slide{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-slide img{
+        display: block;
+        width: 100%;
+        object-fit: contain;
+    }
+    
+    
+   
+
 }
 
-.swiper-container{
-    width: 100%;
-    height: 100%; 
-}
 
-.swiper-slide{
-    padding: 50px;
-}
-.swiper-slide img{
-    
-    
-    
-}
 //SCREENSHOTS
 .screenshots{
     text-align: center;
     padding: 10vh 0;
 
-    &__row2{
+    &__row2,&__row3,&__row4{
         margin-top: 20vh;
     }
 
@@ -156,52 +169,50 @@ body{
 
 //REVİEWS
 .reviews{
-
+  
 }
 
 //DOWNLOAD
 .download{
     max-width: 100%;
-    padding: 5rem;  
-    height: auto;  
+    padding: 3rem 2rem;  
+    //height: auto;  
     background-image: url('../img/banner_bottom.png');
     background-repeat: no-repeat;        
     background-size: contain;
-    background-position: right center;
-    background-color: #648cff;
+    background-position: right bottom;
+    background-color: #648cff;   
     
-    
-    
-    .down{
+    &__col{
         text-align: left;
-        padding-top: 1.5rem;
         &__heading{
             font-size: 2rem;
+            margin: 0;
+            padding: 0;
             color: white;
             
         }
         &__text{
             color:#fff;
             font-size: 1rem;
-            padding: 1rem 0;
-            
+            padding: 1rem 0;            
         }
         &__google{
-            background: url('../img/logo_google.png') no-repeat;  
+            background: url('../img/responsive/logo_google_mini.png') no-repeat;  
             background-size: contain;  
             display: inline-block;                               
             border-radius: 10px;
             width: 150px;
-            height: 150px;            
+            height: 47px;            
             text-decoration: none;
             
         }
         &__app{
-            background: url('../img/logo_apple.png') no-repeat;            
+            background: url('../img/responsive/logo_apple_mini.png') no-repeat;            
             background-size: contain;
             display: inline-block;            
             width: 150px;
-            height: 150px;            
+            height: 47px;            
             text-decoration: none;
             border-radius: 10px; 
         }
@@ -214,49 +225,65 @@ body{
     padding: 2rem;
     background-color: #353854;
     margin-top: auto;
-    .brand{        
-        text-decoration: none;
-        font-size: 1.2rem;
-        margin-right: 2rem;
-        text-align: center;
+    &__row1{
+        //FUN WEATHER
+        &__col-brand{ 
+            text-align: center;           
+            a{        
+                text-decoration: none;
+                font-size: 1.2rem; 
+                  
+                      
+            }
+        }
+        //MENU
+        &__col-menu{ 
+            text-align: center;           
+            a{
+                color: white;
+                font-size: .847rem;
+                text-decoration: none;
+                margin-right: 1rem;
+                padding: 0 .9rem;                
+                font-weight: 400;
+            }
+        }
+        
+
+        &__social-links{
+            display: inline-block;        
+            span{
+                margin-right: 1rem;
+            }
+        }
 
     }
-    .f-link{
-        color: white;
-        font-size: .847rem;
-        text-decoration: none;
-        margin-right: 1rem;
-        padding: 0 .9rem;
-        text-align: center;
-        font-weight: 400;
+    &__row2{
+        &__very-bottom{
+            max-height: 10vh;
+            text-align: right;
+            span{
+                font-size:.600rem;
+            
+            }
+            a{
+                display: block;
+                position: absolute;
+                background:#434769; 
+                right: 3rem;
+                width: 30px;
+                height: 30px;
+                bottom:0;
+                text-align: center;
+                padding: 5px;            
+            }
+        }
+
     }
     
-    .very_bottom{
-        max-height: 10vh;
-        text-align: right;
-        span{
-            font-size:.600rem;
+    
+    
         
-        }
-        a{
-            display: block;
-            position: absolute;
-            background:#434769; 
-            right: 3rem;
-            width: 30px;
-            height: 30px;
-            bottom:0;
-            text-align: center;
-            padding: 5px;
-            
-        }
-    }
-    .social-links{
-        display: inline-block;        
-        span{
-            margin-right: 1rem;
-        }
-    }     
 
 }
 @import 'responsive';
