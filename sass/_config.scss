@@ -16,7 +16,7 @@
     }
 }
 @mixin mediaXLarge {
-    @media screen and (min-width:1171px){
+    @media screen and (min-width:992.98px) and (max-width:1171px){
         @content;
     }
 }

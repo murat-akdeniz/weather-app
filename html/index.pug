@@ -11,18 +11,21 @@ html(lang='en')
   title Weather App
 body
   //-HEADER
-  header.header.header--bgColor 
+  header.header.header--bgColor#scrollTop
     .container-fluid 
       //- HEADER PART 1
       .row.header__row1
         nav.navbar.navbar-expand-lg
           .container-fluid
-            //- BRAND            
-            a(class="header__row1__brand" href="#") FUN WEATHER 
+            //- BRAND  
+            .brand          
+              a(class="header__row1__brand" href="#")
+                span(style="color:#fff; margin-right:5px;") FUN 
+                span(style="color:#fff") WEATHER 
 
             //- SOCIAL LİNKS 
             //- 992 >= üstünde iconlar ensağda olsun -- 992 den küçük olunca kendi sırasında menu elemanlarından önce gelir
-            .d-flex.flex-row.order-lg-3
+            .d-flex.flex-row.order-lg-3.header__row1__social-links
               ul.navbar-nav.flex-row                
                 li.nav-item 
                   a(href="#" class="nav-link text-white px-3")
@@ -41,8 +44,8 @@ body
                 i(class="fas fa-bars")
 
             //- 768>= üstünde menü elemanları iconlardan önce gelsin
-            #myNav.collapse.navbar-collapse.order-lg-2
-              ul.navbar-nav.ml-auto
+            #myNav.collapse.navbar-collapse.order-2.order-lg-2
+              ul.navbar-nav
                 li.nav-item
                   a(class="header__row1__link active" aria-current="page" href="#") Home
                 li.nav-item 
@@ -62,7 +65,7 @@ body
 
     //- HEADER PART 2
     .container
-      .row.header__row2
+      .row.header__row2.text-center
         .col-md-6.header__row2__col
           .div
             h2 Get the most fun 
@@ -78,6 +81,9 @@ body
         .col-md-6
           .img-container 
             img(src="../img/phone_cloudy_1.png", alt="phone", srcset="" class="img-fluid")
+      .scrolldown.text-center
+        a(href="#screenshot") 
+          img(src="../img/circle_scrolldown.png", alt="phone")
       
   //-SECTİON FEATURES
   section.features
@@ -128,12 +134,19 @@ body
                 img(src="../img/widget_left.png", alt="", class="img-fluid")
               .swiper-slide
                 img(src="../img/widget_right.png", alt="",class="img-fluid")
+              .swiper-slide
+                img(src="../img/widget_center.png", alt="" class="img-fluid" )
+              .swiper-slide
+                img(src="../img/widget_left.png", alt="", class="img-fluid")
+              .swiper-slide
+                img(src="../img/widget_right.png", alt="",class="img-fluid")
+                
             .swiper-pagination 
             .swiper-button-prev 
             .swiper-button-next
 
   //-SECTİON SCREENSHOTS
-  section.screenshots 
+  section.screenshots#screenshot
     .container
       .row.screenshots_row1
         h2(style="color:#648cff;") SCREENSHOTS
@@ -267,13 +280,13 @@ body
       .row.footer__row2
         .col-10.pt-3.pb-3.footer__row2__very-bottom
           span © 2021 All rights reserved. Weather App Theme by Gravpix
-          a(href="index.pug")
+          a(href="#scrollTop")
             i(class="fas fa-angle-up" style="color:white;")
 
 
   
-  script(src="../js/popper.js") 
-  //-script(src="../swiper/swiper-bundle.js")
+  script(src="../js/popper.js")  
+  script(src="../js/jquery-3.3.1.min.js")  
   script(src="../swiper/swiper-bundle.min.js")
    
   
