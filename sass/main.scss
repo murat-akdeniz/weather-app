@@ -69,8 +69,18 @@ body{
             background-color:rgba(252,106,66,0); 
             .dropdown-item{
                 color: #fff;
+                padding: .5rem;
             }
+            
+             
         }
+        .dropdown-item:hover {
+            color: #10d621;
+            background: none;
+            transition: all .5s ease-in-out;
+            padding-left: 20px;
+        }
+        
     }
     //ROW 2
     &__row2{

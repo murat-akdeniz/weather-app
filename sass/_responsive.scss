@@ -18,37 +18,35 @@
             padding-top: 2rem;
         }
        &__row1{
-        .brand{
-            //margin-top: 2rem;
-        }
-        &__social-links{
-            //margin-top: 2rem;
-        }
-        #myNav{
-            padding-top: 0;
-            transition:none;                  
-            max-width: 250px;
-            min-width: 250px;
-            position: absolute;
-            top: 0;
-            right: 0;
-            //margin-top: 50px;
-            height: 100vh;
-            text-align: center;
-            background-color:rgba(53,56,84,0.8) ; 
-            color: #444;
-            border-radius: 10px 0 0 10px;
-            z-index: 1;
-            .nav-item{
-                padding: 25px;
-            } 
-            ul{
-                margin-top: 5rem;
-            }           
-        }
-        &__btn{
-            z-index: 2;
-        }
+            &__link{
+                transform: translate3d(0,0,0);
+            }
+            #myNav{
+                padding-top: 0;
+                transition:none;                  
+                max-width: 250px;
+                min-width: 250px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                //margin-top: 50px;
+                height: 100vh;
+                text-align: center;
+                background-color:rgba(53,56,84,0.8) ; 
+                color: #444;
+                border-radius: 10px 0 0 10px;
+                z-index: 1;
+                .nav-item{
+                    padding: 25px;
+                } 
+                .navbar-nav{
+                    margin-top: 5rem;
+                }           
+            }
+
+            &__btn{
+                z-index: 2;
+            }
        }
     }
 
@@ -219,6 +217,19 @@
 @include mediaSmall{
     .header{
         &__row1{
+            nav{
+                padding-left: 0;
+                padding-right: 0;
+                .container-fluid{
+                    padding-left: 0;
+                    
+                }
+            }
+            .brand{
+                margin: 0;
+             
+            }
+            
             
             &__social-links{
                 width: 100%;
